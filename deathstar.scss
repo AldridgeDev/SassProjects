@@ -1,0 +1,36 @@
+@mixin circle() {
+  position: relative;
+  width: 400px;
+	height: 400px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	border-radius: 200px;
+  z-index: 1;
+}
+
+.deathstar {
+  @include circle;
+  background: linear-gradient(to right, #808080, #696969);
+
+   &:after {
+   content:'';
+   position: absolute;
+   background: #a9aaab;
+   border-radius: 50%;
+   height: 135px;
+   width: 135px;
+   top: 10%;
+   left: 45%;
+   z-index: 1;
+   background: linear-gradient(to right, #696969, #3b3b3b)
+}
+
+  &:before {
+  content: '';
+  position: absolute;
+  background: #212121;
+  top:50%;
+  width: 100%;
+  height: 5px;
+}
+}
