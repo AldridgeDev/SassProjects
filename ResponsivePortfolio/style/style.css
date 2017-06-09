@@ -84,6 +84,23 @@ button {
   .page-nav__item:hover {
     opacity: 0.7; }
 
+.section {
+  margin-bottom: 3em; }
+
+.section__title {
+  text-transform: uppercase;
+  color: #15263e;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 3.125em; }
+
+.section__intro-text {
+  color: #4d4d4d;
+  text-align: center;
+  font-size: 1.125em;
+  margin-bottom: 4rem; }
+
 .page-footer {
   background: #dcdcde;
   padding: 6.25em 1.5em; }
@@ -318,5 +335,94 @@ button {
   font-size: 2.25rem;
   display: block;
   font-weight: 600; }
+
+.services__item {
+  text-align: center;
+  margin-bottom: 4em;
+  font-size: 1.125em; }
+
+.services__item-icon {
+  font-size: 2.8125em;
+  display: inline-block;
+  width: 7.1875rem;
+  height: 7.1875rem;
+  background: linear-gradient(45deg, #b119ec, #f8027e);
+  border-radius: 100%;
+  margin-bottom: 1.3rem;
+  position: relative;
+  color: #fff; }
+  .services__item-icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.services__item-title {
+  font-size: 1.5625em;
+  font-weight: bold;
+  margin-bottom: 1.3rem;
+  text-transform: uppercase;
+  color: #4d4d4d; }
+
+.services__item-description {
+  color: #494949;
+  line-height: 1.9; }
+
+.portfolio__nav {
+  text-align: left;
+  margin-bottom: 2em; }
+
+.portfolio__nav-item {
+  color: #4d4d4d;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  display: block;
+  font-size: 1.375em;
+  margin-bottom: 1.25em; }
+  .portfolio__nav-item:hover, .portfolio__nav-item.is-active {
+    color: #a91aef; }
+
+.portfolio__item {
+  display: block;
+  margin-bottom: 2em;
+  text-decoration: none;
+  border: 3px solid transparent;
+  transition: border 0.2s ease; }
+  .portfolio__item:hover {
+    border-color: #a91aef; }
+  .portfolio__item img {
+    max-width: none;
+    width: 100%; }
+
+.blog__item {
+  font-size: 1.125em;
+  margin-bottom: 4em; }
+
+.blog__item-image-container {
+  margin-bottom: 1.5em; }
+  .blog__item-image-container a {
+    display: block;
+    border: 3px solid transparent;
+    transition: border 0.2s ease; }
+    .blog__item-image-container a:hover {
+      border-color: #a91aef; }
+  .blog__item-image-container img {
+    max-width: none;
+    width: 100%; }
+
+.blog__item-header, .blog__item-excerpt {
+  padding: 0 0.3px; }
+
+.blog__item-tag {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #929292;
+  margin-bottom: 0.5em;
+  text-decoration: none; }
+  .blog__item-tag:hover {
+    text-decoration: underline; }
 
 /*# sourceMappingURL=style.css.map */
