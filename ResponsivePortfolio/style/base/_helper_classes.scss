@@ -8,3 +8,14 @@
     clear: both;
   }
 }
+
+.ma {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Hedging a class like this gives us freedom to let content bleed to the full
+// screen width if required, and to only restrain width were it's needed
+.site-width {
+  max-width: $site-width;
+}

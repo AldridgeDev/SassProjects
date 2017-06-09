@@ -35,6 +35,13 @@ button {
 .clearfix::after, .grid::after {
   clear: both; }
 
+.ma {
+  margin-left: auto;
+  margin-right: auto; }
+
+.site-width {
+  max-width: 75em; }
+
 html,
 body {
   background: #fff;
@@ -76,6 +83,49 @@ button {
   padding: 1em 2em; }
   .page-nav__item:hover {
     opacity: 0.7; }
+
+.page-footer {
+  background: #dcdcde;
+  padding: 6.25em 1.5em; }
+
+.footer-module {
+  margin-bottom: 2em;
+  font-size: 0.875em; }
+  .footer-module:last-child {
+    margin-bottom: 0; }
+
+.footer-module__icon, .footer-module__content {
+  display: inline-block;
+  vertical-align: top; }
+
+.footer-module__icon {
+  background: #374362;
+  width: 5.4375rem;
+  height: 5.4375rem;
+  border-radius: 100%;
+  position: relative;
+  font-size: 2.8125em;
+  color: #fff; }
+  .footer-module__icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.footer-module__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 1em;
+  font-size: 1em; }
+
+.footer-module__content {
+  color: #4d4d4d;
+  margin-left: 2em; }
+  .footer-module__content a {
+    color: inherit;
+    text-decoration: none; }
+    .footer-module__content a:hover {
+      text-decoration: underline; }
 
 .grid {
   margin-left: 16px;
