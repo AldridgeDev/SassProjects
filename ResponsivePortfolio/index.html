@@ -11,7 +11,10 @@
   <div class="page">
     <header class="page-header">
         <nav class="page-nav">
-            <ul>
+          <span class="page-nav__hamburger">
+            <i class="fa fa-bars" aria-label="Menu"></i>
+          </span>
+            <ul class="page-nav__ul">
               <li class="page-nav__li">
                 <a href="#services" class="page-nav__item">Services</a>
               </li>
@@ -258,34 +261,40 @@
     </section>
 
     <section class="contact section" id="contact">
-      <h2 class="contact__title section__title">Contact Me</h2>
-      <p class="contact__intro-text section__intro-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab!
-      </p>
+      <div class="contact__wrapper ma">
+        <h2 class="contact__title section__title">Contact Me</h2>
+        <p class="contact__intro-text section__intro-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab!
+        </p>
 
-      <form action="#" class="contact-form">
-        <div class="contact-form__container">
-          <label for="contact-form__name" class="contact-form__label">Name</label>
-          <input type="text" name="name" class="contact-form__field" id="contact-form__name">
-        </div>
-        <div class="contact-form__container">
-          <label for="contact-form__phone" class="contact-form__label">Phone</label>
-          <input type="text" name="phone" class="contact-form__field" id="contact-form__phone">
-        </div>
-        <div class="contact-form__container">
-          <label for="contact-form__email" class="contact-form__label">Email</label>
-          <input type="text" name="email" class="contact-form__field" id="contact-form__email">
-        </div>
-        <div class="contact-form__container">
-          <label for="contact-form__name" class="contact-form__label">Message</label>
-          <textarea name="message" id="contact-form__message" class="contact-form__field contact-form__field--message"></textarea>
-        </div>
+        <form action="#" class="contact-form">
+          <div class="grid">
+              <div class="contact-form__container grid-lg--4">
+                <label for="contact-form__name" class="contact-form__label">Name</label>
+                <input type="text" name="name" class="contact-form__field" id="contact-form__name">
+              </div>
+              <div class="contact-form__container grid-lg--4">
+                <label for="contact-form__phone" class="contact-form__label">Phone</label>
+                <input type="text" name="phone" class="contact-form__field" id="contact-form__phone">
+              </div>
+              <div class="contact-form__container grid-lg--4">
+                <label for="contact-form__email" class="contact-form__label">Email</label>
+                <input type="text" name="email" class="contact-form__field" id="contact-form__email">
+              </div>
+          </div>
+            <div class="contact-form__container">
+              <label for="contact-form__name" class="contact-form__label">Message</label>
+              <textarea name="message" id="contact-form__message" class="contact-form__field contact-form__field--message"></textarea>
+            </div>
 
-        <button class="contact-form__button">
-          Send Message
-        </button>
-      </form>
+            <div class="ac">
+              <button class="contact-form__button">
+                Send Message
+              </button>
+            </div>
+          </form>
 
+      </div> <!-- .contact__wrapper -->
     </section>
 
     <footer class="page-footer">
@@ -332,6 +341,9 @@
     </div> <!-- .site-width -->
     </footer>
   </div>
+
+  <script src="js/zepto.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 <script src="https://use.fontawesome.com/e6dc7316e8.js"></script>
 </html>

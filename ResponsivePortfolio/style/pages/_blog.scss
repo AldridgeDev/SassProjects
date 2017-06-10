@@ -30,3 +30,40 @@
 
   @include hover-underline;
 }
+
+.blog__item-title {
+  font-weight: bold;
+  color: $color-base;
+  font-size: em(20);
+  margin-bottom: 1rem;
+
+  a {
+    color: inherit;
+
+    @include hover-underline;
+  }
+}
+
+.blog__item-excerpt {
+  color: #494949;
+  line-height: 1.9;
+
+  p {
+    margin-bottom: 1.5em;
+  }
+}
+
+.blog__item-read {
+  display: block;
+  text-align: right;
+  color: $color-highlight;
+  font-weight: bold;
+
+  @include hover-underline;
+
+  &::after {
+    content: " \00bb";
+    // 00bb stands for the unicode to bring out the arrows
+    // you can do the same for Font Awesome icons
+  }
+}

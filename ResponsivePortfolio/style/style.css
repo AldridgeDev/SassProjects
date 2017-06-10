@@ -42,6 +42,9 @@ button {
 .site-width {
   max-width: 75em; }
 
+.ac {
+  text-align: center; }
+
 html,
 body {
   background: #fff;
@@ -59,19 +62,26 @@ button {
   background: #15263e;
   color: #fff;
   text-align: center;
-  padding: 1.5em; }
+  padding: 1em 0 0; }
+  @media (min-width: 60em) {
+    .page-nav {
+      padding: 1.5em; } }
 
 .page-nav__li {
-  display: inline-block;
-  position: relative; }
-  .page-nav__li::after {
-    content: "-";
-    position: absolute;
-    top: 50%;
-    right: -0.15em;
-    transform: translate(0, -50%); }
-  .page-nav__li:last-child::after {
-    display: none; }
+  position: relative;
+  border-bottom: 1px solid #ccc; }
+  @media (min-width: 60em) {
+    .page-nav__li {
+      border: 0;
+      display: inline-block; }
+      .page-nav__li::after {
+        content: "-";
+        position: absolute;
+        top: 50%;
+        right: -0.15em;
+        transform: translate(0, -50%); }
+      .page-nav__li:last-child::after {
+        display: none; } }
 
 .page-nav__item {
   display: block;
@@ -79,10 +89,30 @@ button {
   text-decoration: none;
   text-transform: uppercase;
   transition: opacity 0.2s ease;
-  font-size: 1.125em;
-  padding: 1em 2em; }
+  padding: 0.5em 1em; }
   .page-nav__item:hover {
     opacity: 0.7; }
+  @media (min-width: 60em) {
+    .page-nav__item {
+      font-size: 1.125em;
+      padding: 1em 2em; } }
+
+.page-nav__hamburger {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-bottom: 1em; }
+  .page-nav__hamburger:hover {
+    transform: scale(1.2); }
+  @media (min-width: 60em) {
+    .page-nav__hamburger {
+      display: none; } }
+
+.page-nav__ul {
+  display: none; }
+  @media (min-width: 60em) {
+    .page-nav__ul {
+      display: block !important; } }
 
 .section {
   margin-bottom: 3em; }
@@ -316,10 +346,19 @@ button {
   background: #15263e url(../images/welcome_background.jpg) no-repeat center center;
   background-size: cover;
   position: relative;
-  height: 46.25em; }
+  height: 12.5em; }
+  @media (min-width: 60em) {
+    .welcome {
+      height: 21.875em; } }
+  @media (min-width: 75em) {
+    .welcome {
+      height: 37.5em; } }
+  @media (min-width: 100em) {
+    .welcome {
+      height: 46.25em; } }
 
 .welcome__title {
-  font-size: 7.375rem;
+  font-size: 3rem;
   text-transform: uppercase;
   font-weight: 300;
   color: #fff;
@@ -330,11 +369,23 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
+  @media (min-width: 60em) {
+    .welcome__title {
+      font-size: 4.5rem; } }
+  @media (min-width: 75em) {
+    .welcome__title {
+      font-size: 7.375rem; } }
 
 .welcome__title-complement {
-  font-size: 2.25rem;
+  font-size: 0.875rem;
   display: block;
   font-weight: 600; }
+  @media (min-width: 60em) {
+    .welcome__title-complement {
+      font-size: 1.5rem; } }
+  @media (min-width: 75em) {
+    .welcome__title-complement {
+      font-size: 2.25rem; } }
 
 .services__item {
   text-align: center;
@@ -424,5 +475,84 @@ button {
   text-decoration: none; }
   .blog__item-tag:hover {
     text-decoration: underline; }
+
+.blog__item-title {
+  font-weight: bold;
+  color: #15263e;
+  font-size: 1.25em;
+  margin-bottom: 1rem; }
+  .blog__item-title a {
+    color: inherit;
+    text-decoration: none; }
+    .blog__item-title a:hover {
+      text-decoration: underline; }
+
+.blog__item-excerpt {
+  color: #494949;
+  line-height: 1.9; }
+  .blog__item-excerpt p {
+    margin-bottom: 1.5em; }
+
+.blog__item-read {
+  display: block;
+  text-align: right;
+  color: #a91aef;
+  font-weight: bold;
+  text-decoration: none; }
+  .blog__item-read:hover {
+    text-decoration: underline; }
+  .blog__item-read::after {
+    content: " \00bb"; }
+
+.contact {
+  background: #15263e;
+  margin-bottom: 0; }
+
+.section__title, .section__intro-text {
+  color: #fff; }
+
+.contact__wrapper {
+  max-width: 61.125em;
+  padding: 9.375em 0; }
+
+.contact-form {
+  font-size: 1.125em; }
+
+.contact-form__container {
+  margin-bottom: 0.75em; }
+
+.contact-form__label {
+  display: block;
+  color: #fff;
+  margin-bottom: 0.2em; }
+
+.contact-form__field {
+  display: block;
+  padding: 0.5em;
+  color: #4d4d4d;
+  border: 0;
+  background: #fff;
+  width: 100%;
+  transition: background 0.2s ease;
+  border-radius: 0;
+  -webkit-appearance: none; }
+  .contact-form__field:focus {
+    background: #ffc; }
+
+.contact-form__field--message {
+  height: 8em;
+  margin-bottom: 2em; }
+
+.contact-form__button {
+  font-size: 1.125em;
+  font-weight: bold;
+  border: 0;
+  color: #fff;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #b119ec, #f8027e);
+  padding: 1em 2em;
+  transition: transform 0.2s ease; }
+  .contact-form__button:hover {
+    transform: scale(1.1); }
 
 /*# sourceMappingURL=style.css.map */
